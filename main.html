@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a region to get wallet details</h1>
+    <button onclick="showWallet('Palestine')">Help for Palestine</button>
+    <button onclick="showWallet('Russia')">Help for Russia</button>
+    <button onclick="showWallet('America')">Help for America</button>
+    <button onclick="showWallet('Africa')">Help for Africa</button>
+    
+    <p id="wallet-info"></p>
+
+    <script>
+        function showWallet(region) {
+            let walletAddress;
+            switch(region) {
+                case 'Palestine':
+                    walletAddress = 'USDT TRC20 Wallet for Palestine: XYZ1234';
+                    break;
+                case 'Russia':
+                    walletAddress = 'USDT TRC20 Wallet for Russia: ABC5678';
+                    break;
+                case 'America':
+                    walletAddress = 'USDT TRC20 Wallet for America: DEF9101';
+                    break;
+                case 'Africa':
+                    walletAddress = 'USDT TRC20 Wallet for Africa: GHI2345';
+                    break;
+            }
+            document.getElementById('wallet-info').innerText = walletAddress;
+        }
+    </script>
+</body>
+</html>
